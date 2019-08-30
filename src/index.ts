@@ -162,7 +162,7 @@ export async function notarize({
    * is not a big deal
    */
   d('notarization started, waiting for 10 seconds before pinging Apple for status');
-  await delay(10000);
+  await delay(60000);
   d('starting to poll for notarization status');
   await waitForNotarize({ uuid, appleId, appleIdPassword });
   await stapleApp({ appPath });
